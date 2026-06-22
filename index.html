@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meus Objetivos do Ano</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meus Objetivos</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Meus Objetivos do ano</h1>
+  <header>
+    <h1>🎯 Meus Objetivos do Ano</h1>
+    <p>Acompanhe seu progresso em tempo real</p>
+  </header>
 
-    <!-- Abas -->
-    <div class="tabs">
-      <button class="tab active" onclick="abrirAba('cursos')">Cursos</button>
-      <button class="tab" onclick="abrirAba('projetos')">Projetos</button>
-      <button class="tab" onclick="abrirAba('portfolio')">Portfólio</button>
+  <main class="grid">
+
+    <!-- OBJETIVO 1 -->
+    <div class="card">
+      <h2>📘 Estudar JavaScript</h2>
+      <p>Finalizar curso completo</p>
+      <div class="timer" id="timer1"></div>
+      <div class="bar"><div class="progress" id="p1"></div></div>
     </div>
 
-    <!-- Conteúdo -->
-    <div class="content">
-
-      <div id="cursos" class="aba ativa">
-        <h2>Estudar 4 cursos</h2>
-        <p>Tempo restante:</p>
-        <div class="timer" id="timer"></div>
-      </div>
-
-      <div id="projetos" class="aba">
-        <h2>Criar projetos em JavaScript</h2>
-      </div>
-
-      <div id="portfolio" class="aba">
-        <h2>Criar portfólio</h2>
-      </div>
-
+    <!-- OBJETIVO 2 -->
+    <div class="card">
+      <h2>💻 Criar projetos</h2>
+      <p>Fazer 5 projetos reais</p>
+      <div class="timer" id="timer2"></div>
+      <div class="bar"><div class="progress" id="p2"></div></div>
     </div>
-  </div>
+
+    <!-- OBJETIVO 3 -->
+    <div class="card">
+      <h2>🌐 Portfólio</h2>
+      <p>Publicar site profissional</p>
+      <div class="timer" id="timer3"></div>
+      <div class="bar"><div class="progress" id="p3"></div></div>
+    </div>
+
+    <!-- OBJETIVO 4 -->
+    <div class="card">
+      <h2>🚀 Conseguir estágio</h2>
+      <p>Aplicar para vagas</p>
+      <div class="timer" id="timer4"></div>
+      <div class="bar"><div class="progress" id="p4"></div></div>
+    </div>
+
+  </main>
 
   <script src="script.js"></script>
 </body>
