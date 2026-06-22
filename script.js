@@ -1,37 +1,83 @@
-// Troca de abas
-function abrirAba(id) {
-  const abas = document.querySelectorAll('.aba');
-  const botoes = document.querySelectorAll('.tab');
-
-  abas.forEach(a => a.classList.remove('ativa'));
-  botoes.forEach(b => b.classList.remove('active'));
-
-  document.getElementById(id).classList.add('ativa');
-  event.target.classList.add('active');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-// ===== CONTADOR DE TEMPO =====
+body {
+  background: #0f0f17;
+  color: #fff;
+  padding: 20px;
+}
 
-// Define uma data final (ex: 30 dias a partir de agora)
-const destino = new Date();
-destino.setDate(destino.getDate() + 30);
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-function atualizarTimer() {
-  const agora = new Date().getTime();
-  const distancia = destino - agora;
+header h1 {
+  font-size: 28px;
+}
 
-  const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-  const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+header p {
+  color: #aaa;
+}
 
-  document.getElementById("timer").innerHTML =
-    `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
 
-  if (distancia < 0) {
-    document.getElementById("timer").innerHTML = "Tempo finalizado!";
+/* CARD */
+.card {
+  background: #1b1b2a;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #bbb;
+  margin-bottom: 15px;
+}
+
+/* TIMER */
+.timer {
+  font-size: 18px;
+  color: #00ff99;
+  margin-bottom: 10px;
+}
+
+/* PROGRESS BAR */
+.bar {
+  width: 100%;
+  height: 8px;
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #6c5ce7, #00ff99);
+  transition: 0.5s;
+}
+
+/* RESPONSIVO */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 22px;
   }
 }
-
-setInterval(atualizarTimer, 1000);
-atualizarTimer();
