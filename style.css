@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background: #2c2c3a;
+  color: white;
+  border-radius: 8px;
+}
+
+.tab.active {
+  background: #6c5ce7;
+}
+
+.content {
+  background: #1e1e2a;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.aba {
+  display: none;
+}
+
+.aba.ativa {
+  display: block;
+}
+
+.timer {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #00ff88;
+}
